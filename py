@@ -224,4 +224,25 @@ while True:
     if pipex <= 0:
         pipex = 1000
         height = random.randint(50, 500)
+----------------------------------------------------------------------------------------------------------------------------
+Snow Falling Simulation
+import pygame
+import random
+from pygame.locals import*
+random_coordinate = []
+pygame.init()
+screen = pygame.display.set_mode((600, 600))
+for i in range(50):
+    a=[random.randint(0,600), random.randint(0,600)]
+    random_coordinate.append(a)
+
+while True:
+    pygame.display.update()
+    screen.fill((0,0,0))
+    for r in random_coordinate:
+        pygame.draw.circle(screen, (255,255,255), r, 2)
+        r[1] += 1
+        if r[1] == 600:
+            r[1] = 1
+            r[0] = random.randint(0,600)
 
