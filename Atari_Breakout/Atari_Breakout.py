@@ -6,6 +6,9 @@ def atari_breakout():
     screen = pygame.display.set_mode((1000,600))
     over = pygame.font.Font('freesansbold.ttf',160)
 
+    # Test comment to check git
+    # Another
+
     carryOn = True
 
     def draw_rect(x,y,width,height):
