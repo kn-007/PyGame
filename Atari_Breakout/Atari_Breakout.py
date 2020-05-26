@@ -1,13 +1,16 @@
 def atari_breakout():
     import pygame,random,time
+    WIDTH=1000
+    HEIGHT=600
 
     pygame.init()
 
-    screen = pygame.display.set_mode((1000,600))
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
     over = pygame.font.Font('freesansbold.ttf',160)
 
     # Test comment to check git
     # Another
+    # Test 2
 
     carryOn = True
 
