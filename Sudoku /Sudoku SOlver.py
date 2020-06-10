@@ -1,6 +1,7 @@
 import numpy as np
 import sys,time
 start = time.process_time()
+#Sub box count
 BOARD_LEN = 3
 TOTAL = BOARD_LEN ** 2
 board = [
