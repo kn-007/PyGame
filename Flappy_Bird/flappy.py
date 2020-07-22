@@ -110,4 +110,3 @@ def flappy():
             pygame.display.update()
         show_score(scorex,scorey)
         pygame.display.update()
-flappy()
