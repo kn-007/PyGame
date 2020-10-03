@@ -11,9 +11,10 @@ import math
 import pygame
 import time
 import numpy as np
-from SudokuSolverClass import Solver
+from SudokuSolverClass import solver
 
 pygame.init()
+pygame.font.init()
 start = time.time()
 
 solver = Solver([
@@ -56,8 +57,8 @@ class Grid:
         self.test = 0
 
     def draw(self, window):
-        increment_x = self.width / self.columns
-        increment_y = self.height / self.rows
+        increment_x = self.width // self.columns
+        increment_y = self.height // self.rows
         subBox = math.sqrt(self.rows)
         for x in range(1, self.rows):
             thick = 10 if x % subBox == 0 else 3
@@ -67,7 +68,7 @@ class Grid:
             for cube in row:
                 cube.draw(window)
         fntSize = int(self.extra_gap * 1.2307692308)
-        font = pygame.font.Font('couriernewbold.ttf', fntSize)
+        font = pygame.font.SysFont('Courier New Bold', fntSize)
         strike_display = font.render(str("X") * self.strikes, True, (255,20,147))
         window.blit(strike_display, (0, self.height - 10))
 
